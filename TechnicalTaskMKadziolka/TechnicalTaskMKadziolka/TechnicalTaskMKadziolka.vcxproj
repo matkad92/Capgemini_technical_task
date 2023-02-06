@@ -127,7 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Phone.cpp" />
+    <ClCompile Include="PhoneManager.cpp" />
     <ClCompile Include="TechnicalTaskMKadziolka.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Phone.h" />
+    <ClInclude Include="PhoneManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
