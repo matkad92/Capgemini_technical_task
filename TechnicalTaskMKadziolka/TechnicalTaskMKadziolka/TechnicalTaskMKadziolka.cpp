@@ -15,7 +15,8 @@ int main()
     //manager.addPhone();
     //manager.addPhone();
     manager.printAllPhones();
-
+    manager.deletePhone();
+    manager.printAllPhones();
 }
 
 

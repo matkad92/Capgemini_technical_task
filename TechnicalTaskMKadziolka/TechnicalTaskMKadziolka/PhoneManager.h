@@ -15,6 +15,6 @@ public:
 
 	void addPhone();
 	void printAllPhones();//method helping during work, late should make it private
-
+	void deletePhone();
 };
 

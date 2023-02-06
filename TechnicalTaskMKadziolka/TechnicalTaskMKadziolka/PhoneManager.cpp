@@ -28,6 +28,26 @@ void PhoneManager::printAllPhones()
 	}
 }
 
+void PhoneManager::deletePhone()//some safety mechanisms should be added
+{
+	int enteredId;
+	std::cout << "Enter id of phone You want to delete:" << std::endl;
+	std::cin >> enteredId;
+	auto iter = storedPhones.begin();
+	while (iter != storedPhones.end())
+	{
+		if (iter->getId() == enteredId)
+		{
+			storedPhones.erase(iter);
+			std::cout << "erased!" << std::endl;
+			getchar();
+			break;
+		}
+		iter++;
+	}
+
+}
+
 
 Phone PhoneManager::getNewPhoneData()
 {
