@@ -12,11 +12,13 @@ int main()
     PhoneManager manager;
 
     manager.addPhone();
+    manager.addPhone();
+    manager.printRaport();
     //manager.addPhone();
     //manager.addPhone();
-    manager.printAllPhones();
-    manager.deletePhone();
-    manager.printAllPhones();
+    //manager.printAllPhones();
+    //manager.deletePhone();
+   //manager.printAllPhones();
 }
 
 

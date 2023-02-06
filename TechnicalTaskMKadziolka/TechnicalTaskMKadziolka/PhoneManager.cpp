@@ -1,5 +1,6 @@
 #include "PhoneManager.h"
 #include <iostream>
+#include <algorithm>
 
 int PhoneManager::getNewPhoneId()
 {
@@ -48,6 +49,12 @@ void PhoneManager::deletePhone()//some safety mechanisms should be added
 
 }
 
+void PhoneManager::printRaport()
+{
+	std::cout << "Phones by the same brand:" << std::endl;
+	printByBrand();
+}
+
 
 Phone PhoneManager::getNewPhoneData()
 {
@@ -82,4 +89,22 @@ Phone PhoneManager::getNewPhoneData()
 	phone.setId(getNewPhoneId());
 	
 	return phone;
+}
+
+void PhoneManager::printByBrand()
+{
+	auto storedPhonessorted = storedPhones;
+
+	std::sort(storedPhonessorted.begin(), storedPhonessorted.end(), [](Phone& lhs, Phone& rhs) {return lhs.getBrand() < rhs.getBrand(); });
+
+
+	for (auto iter : storedPhonessorted)
+	{
+		std::cout << iter.getId() << std::endl;
+		std::cout << iter.getBrand() << std::endl;
+		std::cout << iter.getModel() << std::endl;
+		std::cout << iter.getForm() << std::endl;
+		std::cout << iter.getYear() << std::endl;
+		std::cout << iter.getPrice() << std::endl;
+	}
 }
