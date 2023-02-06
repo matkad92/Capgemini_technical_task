@@ -9,7 +9,12 @@
 
 int main()
 {
-    PhoneManager Manager;
+    PhoneManager manager;
+
+    manager.addPhone();
+    //manager.addPhone();
+    //manager.addPhone();
+    manager.printAllPhones();
 
 }
 

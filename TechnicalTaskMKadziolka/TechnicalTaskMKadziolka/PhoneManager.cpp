@@ -10,17 +10,24 @@ void PhoneManager::addPhone()
 {
 	Phone phone = getNewPhoneData();
 	storedPhones.push_back(phone);
-	std::cout << "Phone had been added!";
+	std::cout << "Phone had been added!"<<std::endl;
 	getchar();
 }
 
-//unsigned int id;
-//std::string brandName;
-//std::string modelName;
-//std::string formFactor;
-//std::string yearOfIssue;
-//float screenSize;
-//float price;
+void PhoneManager::printAllPhones()
+{
+
+	for (auto iter: storedPhones)
+	{
+		std::cout << iter.getId() << std::endl;
+		std::cout << iter.getBrand() << std::endl;
+		std::cout << iter.getModel() << std::endl;
+		std::cout << iter.getForm() << std::endl;
+		std::cout << iter.getYear() << std::endl;
+		std::cout << iter.getPrice() << std::endl;
+	}
+}
+
 
 Phone PhoneManager::getNewPhoneData()
 {

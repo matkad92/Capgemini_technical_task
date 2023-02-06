@@ -40,7 +40,7 @@ void Phone::setPrice(float sendPrice)
 
 int Phone::getId()
 {
-	return 0;
+	return id;
 }
 
 //unsigned int id;
