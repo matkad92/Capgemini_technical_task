@@ -1,64 +1,82 @@
 #include "Phone.h"
 
-void Phone::setId()
+void Phone::setId(int sendId)
 {
+	id = sendId;
 }
 
 void Phone::setBrand(std::string brand)
 {
+	brandName = brand;
 }
 
 void Phone::setModel(std::string model)
 {
+	modelName = model;
 }
 
-void Phone::setFoam(std::string foam)
+
+
+void Phone::setForm(std::string form)
 {
+	formFactor = form;
 }
 
 void Phone::setYear(std::string year)
 {
+	yearOfIssue = year;
 }
 
 void Phone::setSize(float size)
 {
+	screenSize = size;
 }
 
-void Phone::setPrice(float price)
+void Phone::setPrice(float sendPrice)
 {
+	price = sendPrice;
 }
+
 
 int Phone::getId()
 {
 	return 0;
 }
 
+//unsigned int id;
+//std::string brandName;
+//std::string modelName;
+//std::string formFactor;
+//std::string yearOfIssue;
+//float screenSize;
+//float price;
+
 std::string Phone::getBrand()
 {
-	return std::string();
+	return brandName;
 }
 
 std::string Phone::getModel()
 {
-	return std::string();
+	return modelName;
 }
 
-std::string Phone::getFoam()
+std::string Phone::getForm()
 {
-	return std::string();
+	return formFactor;
 }
 
 std::string Phone::getYear()
 {
-	return std::string();
+	return yearOfIssue;
 }
 
 float Phone::getSize()
 {
-	return 0.0f;
+	return screenSize;
 }
 
 float Phone::getPrice()
 {
-	return 0.0f;
+	return price;
 }

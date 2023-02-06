@@ -12,18 +12,18 @@ class Phone
 	float price;
 
 public:
-	void setId();
+	void setId(int sendId);
 	void setBrand(std::string brand);
 	void setModel(std::string model);
-	void setFoam(std::string foam);
+	void setForm(std::string form);
 	void setYear(std::string year);
 	void setSize(float size);
-	void setPrice(float price);
+	void setPrice(float sendPrice);
 
 	int getId();
 	std::string getBrand();
 	std::string getModel();
-	std::string getFoam();
+	std::string getForm();
 	std::string getYear();
 	float getSize();
 	float getPrice();
